@@ -36,7 +36,37 @@ Prerequisites
 Java Development Kit (JDK) 8 or higher.
 Apache Tomcat server.
 MySQL database.
-Maven (optional, for build automation).
+User Management Application
+
+## Description
+A simple web application that demonstrates user registration and profile display using Servlets and JSP.
+
+## Features
+- User registration with validation.
+- Profile display using JSP.
+- Unit tests for Service and DAO layers.
+
+## Setup
+1. Clone the repository:
+   ```bash
+   git clone <repository-link>
+Import the project into your IDE.
+Run the project on your preferred servlet container (e.g., Apache Tomcat).
+Technologies Used
+Java
+Servlet API
+JSP
+Maven
+JUnit 5
+How to Run
+Deploy the project on a servlet container.
+Access the application at http://localhost:8080.
+Authors
+Your Name
+yaml
+Copy code
+ **6. Folder Structure**
+project-root/ │ ├── src/ │ ├── main/ │ │ ├── java/ │ │ │ └── com/yourproject/servlets/ │ │ │ ├── UserManagementServlet.java │ │ │ └── UserRegistrationServlet.java │ │ ├── webapp/ │ │ └── WEB-INF/views/ │ │ ├── userRegistration.jsp │ │ └── userProfile.jsp │ └── test/ │ └── java/com/yourproject/ │ ├── service/UserServiceTest.java │ └── dao/UserDAOTest.java │ ├── pom.xml └── README.md
 Setup Instructions
 Database Setup
 
