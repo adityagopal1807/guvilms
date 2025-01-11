@@ -1,15 +1,25 @@
-package com.yourproject.service;
+package com.yourproject.servlets;
 
-import org.junit.jupiter.api.Test;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+@WebServlet("/user")
+public class UserManagementServlet extends HttpServlet {
 
-public class UserServiceTest {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        response.getWriter().write("<h1>User Management - GET Method</h1>");
+    }
 
-    @Test
-    public void testUserValidation() {
-        String username = "TestUser";
-        boolean isValid = username.matches("[a-zA-Z0-9]+");
-        assertEquals(true, isValid, "Username should only contain alphanumeric characters.");
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        response.setContentType("text/html");
+        response.getWriter().write("<h1>Welcome, " + username + "!</h1>");
     }
 }
