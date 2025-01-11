@@ -49,7 +49,7 @@ A simple web application that demonstrates user registration and profile display
 ## Setup
 1. Clone the repository:
    ```bash
-   git clone <repository-link>
+   git clone <https://github.com/adityagopal1807/guvilms.git)>
 Import the project into your IDE.
 Run the project on your preferred servlet container (e.g., Apache Tomcat).
 Technologies Used
